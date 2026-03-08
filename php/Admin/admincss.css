@@ -1,0 +1,90 @@
+body{
+    background-image: url(../../imagenes/fondo.png);
+    background-size: cover;
+    
+}
+
+#todo{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 7px 13px 37px #000;
+}
+
+#titulo{
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+div form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form #pass{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+#pass input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+#pass label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+#pass input:focus ~ label,
+#pass input:focus ~ label{
+    top: -5px;
+    color: rgba(10, 22, 75, 0.658);
+    transition: 0.7s;
+}
+
+form input[type="submit"]{
+    margin-bottom: 30px;
+    width: 120px;
+    height: 45px;
+    border: 1px solid;
+    background: black;
+    border-radius: 25px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+form input[type="submit"]:hover{
+    border-color: purple;
+    transition: 0.5s;
+}
+
+#volver{
+    border-radius: 25px;
+    height: 50px;
+    width: 155px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
