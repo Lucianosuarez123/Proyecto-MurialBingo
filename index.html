@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio </title>
+        <link rel="stylesheet" href="./css/estilos.css">
+        
+        
+    </head>
+    <body>
+        
+    <!-- 
+        <?php echo utf8_encode($dataselect['CANTIDAD']); ?>
+            <?php echo utf8_encode($dataselect['DESCRIPCION']); ?>
+        ESTO ES EL INDEX PRINCIPAL osea el que me deja elejir que tipo de rol soy y etcetera @tomigal o @lucho editar el css que no esta terminado -->
+
+        <div id="seccionRecargar">
+            <Div id="seleccion_de_roles">
+                <div id="HEADER">
+                    <header >
+                        <h1>MurialBingo</H1>
+                    </header>
+                </div>
+                <div id="roles">
+                    <P id="LOL">¿Que rol va a cumplir?</P>
+                    <select id="cmbColumn" class="cmbColumn" name="cmbcolumn" onchange="location = this.value">
+                        <option >Seleccione su rol</option>
+                        <optgroup label="Cocina">
+                            <option value="./php/Cocina/checkus.php">Cocinero/a</option>
+                            <option value="./php/Cajero/checkus.php">Cajero/a</option>
+                            <option value="./php/Despacho/checkus.php">Despachante</option>
+                        </optgroup>
+                            <optgroup label="Administrador">
+                            <option value="./php/Admin/checkus.php">Administrador/a</option>
+                        </optgroup>
+                        <optgroup label="Cliente">
+                            <option value="./php/Cliente/vista_cliente.php">Cliente</option>
+                        </optgroup>
+                        <br>
+                    </select>
+                </div>        
+            </Div>
+        </div>
+
+    </body>
+</html>
