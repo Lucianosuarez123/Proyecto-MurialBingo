@@ -60,7 +60,11 @@
                         <tbody>
                             <tr>
                                 <td ><?php $var1 = ($dataselect['CODIGO']);; 
-                                $var4 = ($dataselect['DESCRIPCION']); echo $var4;
+                                $var3 = ($dataselect['DESCRIPCION']); 
+                                $var4 = str_replace( "$", " " , $var3);
+                                echo $var4;
+
+                    
                                 ?></td>
                                 <td ><?php $var2 = ($dataselect['PRECIO']); echo $var2; ?> </td>
                                 <td ><?php $var4 = ($dataselect['STOCK']); echo $var4; ?></td>
@@ -133,7 +137,12 @@
                         ?>
 
                         <tr>
-                            <td><?php echo $dataselect['DESCRIPCION'];?> </td>
+                            <td>
+                            <?php $nombre=($dataselect['DESCRIPCION']); 
+                             $cambio = str_replace( "$", " " , $nombre);     
+                             echo $cambio;
+                             ?>
+                            </td>
                             <?php while ($informacion= mysqli_fetch_array($sqlproducto3)){ ?>  
                             <td align="center"><?php echo $informacion['SUM(CANTIDAD)'];?> </td>
                             <td align="center">$ <?php  echo $informacion['SUM(CANTIDAD*PRECIO_VENTA)'];?> </td>

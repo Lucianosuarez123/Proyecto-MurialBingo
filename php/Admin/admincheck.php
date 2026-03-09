@@ -28,9 +28,10 @@ while ($seleccion = mysqli_fetch_array($dataproductoSelect)){
     }
 }
 
-$Nombre=$_POST['nuevoprod'];
+$Nombre1=$_POST['nuevoprod'];
 $precio=$_POST['precioprod'];
 $stock=$_POST['stock'];
+$Nombre=str_replace( " ", "$" , $Nombre1);
 $sqlproducto1        = ("SELECT * FROM producto");
 $dataproductoSelect1  = mysqli_query($link, $sqlproducto1);
 while($po = mysqli_fetch_array($dataproductoSelect1)){
@@ -79,3 +80,16 @@ mysqli_query($link ,"INSERT INTO `producto`(`DESCRIPCION`, `PRECIO`, `ESTADO`, `
 ?>
 </body>
 </html>
+
+<?php
+
+/*
+SET FOREIGN_KEY_CHECKS=0;
+TRUNCATE TABLE producto;
+TRUNCATE TABLE clientes;
+TRUNCATE TABLE ordenes;
+TRUNCATE TABLE linea_pedidos;
+SET FOREIGN_KEY_CHECKS=1;
+*/
+
+?>

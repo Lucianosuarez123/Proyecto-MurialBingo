@@ -11,7 +11,7 @@
     <button id="volver" onclick="location = this.value='../../index.html'">Volver a seleccionar un Rol</button>
     <div id="todo">
         <H1 id="titulo">Cajero</H1>
-        <form id="formulario" action="cajero.php" method="post">
+        <form id="formulario" action="verify.php" method="post">
             <div id="pass">
                 <input type="password" name = "contra">
                 <label>Contraseña</label>

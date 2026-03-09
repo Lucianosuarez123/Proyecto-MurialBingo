@@ -5,19 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../Cliente/cliente.css">
-  <title>DESPACHO</title>
   <meta http-equiv="refresh" content="1;url=./vista_cliente.php" />
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-</head>
+  <title>VISTA DEL CLIENTE</title>
+  </head>
 <body>
 <div id="CON1">
   <h2 id="PE">PEDIDOS ENTRANTES</h2>
     <?php include ("../db/conexion.php");
       $sqlproducto         = ("SELECT distinct ID,DNI,NOMBRE,APELLIDO,N_ORDENES,ID_CL,ESTADO FROM clientes INNER JOIN ordenes on ID_CL=clientes.ID WHERE ESTADO=0");
       $dataproductoSelect  = mysqli_query($link, $sqlproducto);?>
-<form action="enviardespacho.php" method="post" >
+<form class="formu" action="enviardespacho.php" method="post" >
     <?php while($dataselect= mysqli_fetch_array($dataproductoSelect)){?>
-      <table width="20%" border="1px">
+      <table class="styled-table" width="20%" border="1px">
             <tr align="center">
                 <td>N°</td>
                 <td>DNI</td>
@@ -40,9 +39,9 @@
     <?php   
     $sqlproducto         = ("SELECT distinct ID,DNI,NOMBRE,APELLIDO,N_ORDENES,ID_CL,ESTADO FROM clientes INNER JOIN ordenes on ID_CL=clientes.ID WHERE ESTADO=1 or ESTADO=2");
     $dataproductoSelect  = mysqli_query($link, $sqlproducto);?>
-<form action="enviardespacho2.php" method="post" >
+<form class="formu" action="enviardespacho2.php" method="post" >
   <?php while($dataselect= mysqli_fetch_array($dataproductoSelect)){?>
-          <table width="20%" border="1px">
+          <table class="styled-table" width="20%" border="1px">
             <tr align="center">
                 <td>N°</td>
                 <td>DNI</td>
@@ -67,11 +66,11 @@
         $dataproductoSelect  = mysqli_query($link, $sqlproducto);
         #("SELECT DISTINCT * FROM ordenes INNER JOIN linea_pedidos on ORD_NUM=NUM_ORDER INNER JOIN producto ON NUM_COMIDA=NUM_PRODUCTO ORDER BY ORD_NUM ASC;");
         ?>
-<form action="enviardespacho4.php" method="post" >
+<form class="formu" action="enviardespacho4.php" method="post" >
     <?php 
     while($dataselect= mysqli_fetch_array($dataproductoSelect)){
     ?>
-<table width="20%" border="1px">
+<table class="styled-table" width="20%" border="1px">
             <tr align="center">
                 <td>N°</td>
                 <td>DNI</td>
@@ -83,7 +82,7 @@
                 <td ><?php $var1 = ($dataselect['N_ORDENES']); echo $dataselect['DNI']?></td>
                 <td><?php echo $dataselect['NOMBRE']; ?></td>
                 <td><?php echo $dataselect['APELLIDO']; ?></td>
-                <td><input type="checkbox" id="<?php echo $var1 ?>" name="<?php echo $var1 ?>"></td>
+                
             </tr>
 </TABLE> <br>
     <?php } ?>

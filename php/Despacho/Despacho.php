@@ -19,7 +19,7 @@
         $dataproductoSelect  = mysqli_query($link, $sqlproducto);?>
   <form action="enviardespacho.php" method="post" >
       <?php while($dataselect= mysqli_fetch_array($dataproductoSelect)){?>
-        <table width="20%" border="1px">
+        <table class="styled-table" width="20%" border="1px">
               <tr align="center">
                   <td>N°</td>
                   <td>DNI</td>
@@ -46,7 +46,7 @@
       $dataproductoSelect  = mysqli_query($link, $sqlproducto);?>
   <form action="enviardespacho2.php" method="post" >
     <?php while($dataselect= mysqli_fetch_array($dataproductoSelect)){?>
-            <table width="20%" border="1px">
+            <table class="styled-table" width="20%" border="1px">
               <tr align="center">
                   <td>N°</td>
                   <td>DNI</td>
@@ -75,7 +75,7 @@
       <?php 
       while($dataselect= mysqli_fetch_array($dataproductoSelect)){
       ?>
-  <table width="20%" border="1px">
+  <table class="styled-table" width="20%" border="1px">
               <tr align="center">
                   <td>N°</td>
                   <td>DNI</td>
@@ -95,7 +95,9 @@
   $dataproductoSelect1  = mysqli_query($link, $sqlproducto1);
   while ($dataselect1 = mysqli_fetch_array($dataproductoSelect1))
   {?>
-      <td><?php echo $dataselect1['DESCRIPCION']; ?></td>
+      <td><?php $var1 =$dataselect1['DESCRIPCION']; 
+    $var2=str_replace( "$", " " , $var1);
+    echo $var2; ?></td>
       <td><?php echo $dataselect1['CANTIDAD']; ?></td>
       </tr>  
     
@@ -121,7 +123,7 @@
       <?php 
       while($dataselect= mysqli_fetch_array($dataproductoSelect)){
       ?>
-  <table width="20%" border="1px">
+  <table class="styled-table" width="20%" border="1px">
               <tr align="center">
                   <td>N°</td>
                   <td>DNI</td>
@@ -142,9 +144,11 @@
   </form>
     </div>
 </body>
+
 <footer>
-<button id="Boton-volver" onclick="location = this.value='../../index.html'">Volver a seleccionar un Rol</button>
+
 </footer>
+
 </html>
 <script>
 
@@ -165,6 +169,7 @@ $.each(values, function(key, value) {
 });
 
 </script>
+<button  id="volver" onclick="location = this.value='../../../index.html'">Volver a seleccionar un Rol</button> 
 <br>
 <br>
 <br>

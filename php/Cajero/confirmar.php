@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="confirmarcss.css">
-    <title>Document</title>
+    <title>CONFIRMAR PEDIDOS</title>
 </head>
 <body>
 <?php include ("../db/conexion.php"); ?>
@@ -14,7 +14,6 @@
 $DNI=$_POST['ID'];
 $nombre=$_POST['Nombre'];
 $Apellido=$_POST['Apellido'];
-echo "registro completo y subido $";
        // mysqli_query($link ,"INSERT INTO `clientes`( `DNI`, `NOMBRE`, `APELLIDO`) VALUES ('$DNI','$nombre','$Apellido')");
 
 $totalfinal=0;
@@ -48,7 +47,8 @@ echo $Apellido ?>" >
         $total = $dataSelection['PRECIO'] * $rasta;
         $totalfinal = $totalfinal + $total;
         }?>
-      
+<div class="texto">
+<b>      
 <?php 
 /*
         $data5 = ("SELECT * FROM clientes WHERE DNI=$DNI ORDER BY ID DESC LIMIT 1 ");
@@ -80,18 +80,21 @@ echo $Apellido ?>" >
         mysqli_query($link, "UPDATE producto SET STOCK=$restante WHERE CODIGO = $includeconection");
         ?>
 <?php } */
-echo $totalfinal;
+echo "Registro cargado, el total es: $", $totalfinal;
 
-?> 
-
-<input type="submit"value="Confirmar pedido"name="enviar">
-</form>
+?>
+</b> 
+</div>
 <br>
-<button onclick="location = this.value='Cajero.php'">Cancelar pedido</button>
+<br>
+<input class="boton1" type="submit"value="Confirmar pedido"name="enviar">
+</form>
+
+<button class="boton2" onclick="location = this.value='Cajero.php'">Cancelar pedido</button>
 </body>
 </html>
 <br>
-<button onclick="javascript: history.go(-1)" >Cambiar pedido</button>
+<button class="boton3" onclick="javascript: history.go(-1)" >Cambiar pedido</button>
 <br>
 <button  id="volver"  onclick="location = this.value='../../../index.html'">Volver a seleccionar un Rol</button>
 

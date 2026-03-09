@@ -17,8 +17,25 @@ $DNI=$_POST['ID'];
 $nombre=$_POST['Nombre'];
 $Apellido=$_POST['Apellido'];
 $totalfinal=0;
-mysqli_query($link ,"INSERT INTO `clientes`( `DNI`, `NOMBRE`, `APELLIDO`) VALUES ('$DNI','$nombre','$Apellido')");
 
+$data20 = ("SELECT UPPER(DNI),UPPER(NOMBRE),UPPER(APELLIDO) FROM clientes");
+$dataselect20 = mysqli_query($link, $data20);
+while ($vtv=mysqli_fetch_array($dataselect20)){
+        if (strtoupper($DNI) === $vtv['UPPER(DNI)'] && strtoupper($nombre) === $vtv['UPPER(NOMBRE)'] && strtoupper($Apellido) === $vtv['UPPER(APELLIDO)'])
+        {
+                $flag = 1;
+
+        }
+        else
+        {
+                $flag = 0;      
+        }
+}
+
+
+if ($flag == 0){
+mysqli_query($link ,"INSERT INTO `clientes`( `DNI`, `NOMBRE`, `APELLIDO`) VALUES ('$DNI','$nombre','$Apellido')");
+}
 
 ?>
 <?php

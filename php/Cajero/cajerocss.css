@@ -1,3 +1,5 @@
+
+
 body{
     background-image: url(../../imagenes/fondo.png);
     background-size: cover;
@@ -30,7 +32,15 @@ form #pass{
     position: relative;
     border-bottom: 2px solid #adadad;
     margin: 30px 0;
+}  
+
+
+
+.comida{
+    font-size: 200px;
 }
+
+
 
 #pass input{
     width: 100%;
@@ -78,13 +88,22 @@ form input[type="submit"]:hover{
     transition: 0.5s;
 }
 
+
+table.datos{
+    position: fixed;
+}
+
+
 #volver{
     border-radius: 25px;
     height: 50px;
     width: 155px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 25px;
     margin-top: 25px;
     cursor: pointer;
 }
 
+p{
+    font-size: 200px;
+}

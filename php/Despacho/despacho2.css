@@ -2,55 +2,96 @@
     margin:0;
     padding:0;
 }
-
-#CON1 {
-    position:absolute;
-    margin-left: 3%;
-    width:200px;
-    margin-top:10px;
-    margin-right: 20px;
-    top:0px;
-    left:0px;
+#volver{
+    position: fixed !important; 
+    background-color: #000000  !important;
+    margin-top: 100% !important; 
+    bottom: 0 !important;
+    width: 100%!important;
+    height: 40px!important;
+    color: white!important;
+    border: 0px!important;
+    font-family: monospace !important;
+}
+body{
+    display: flex;
+    background-image: url(../../imagenes/imagen2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    margin-top: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #212529;
+    
 }
 
-#CON2 {
-    margin-left:25%;
-    margin-right:20px;
-    margin-top:10px;
-    width:200px;
-    position:absolute;
-    top:0px;
-    left:0px;
+#CON1{ 
+    
+    flex: 15%;
+    padding: 10px;
+    margin: 5px;
+    background: linear-gradient(rgba(209, 209, 209, 0.5), rgba(209, 209, 209, 0.5));
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
+}  
+
+
+
+#CON2{
+    
+    
+    flex: 15%;
+    padding: 10px;
+    margin: 5px;
+    background: linear-gradient(rgba(209, 209, 209, 0.5), rgba(209, 209, 209, 0.5));
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+    
+
+
+#CON3{
+    
+    
+    flex: 15%;
+    padding: 10px;
+    margin: 5px;
+    background: linear-gradient(rgba(209, 209, 209, 0.5), rgba(209, 209, 209, 0.5));
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
 }
 
-#CON3 {
-    margin-left: 50%;
-    margin-right:20px;
-    margin-top:10px;
-    width:200px;
-    position:absolute;
-    top:0px;
-    left:0px;
+
+#CON4{
+    
+    
+    flex: 15%;
+    padding: 10px;
+    margin: 5px;
+    background: linear-gradient(rgba(209, 209, 209, 0.5), rgba(209, 209, 209, 0.5));
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+
+.styled-table {
+    background-color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-table;
+    align-items: center;
     justify-content: center;
-}
-
-#CON4 {
-    margin-left: 75%;
-    margin-right:20px;
-    margin-top:10px;
-    width:200px;
-    position:absolute;
-    top:0px;
-    left:0px;
-}
-
-#Boton-volver{
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    color: white;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 h2{
@@ -60,3 +101,5 @@ h2{
     font-family: monospace;
     padding-bottom: 9px;    
 }
+
+
